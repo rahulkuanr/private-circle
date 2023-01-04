@@ -1,0 +1,21 @@
+<div class="container">
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>List Name</th>
+        <th>No of Entities</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let datum of data | appFilter: searchKeyword">
+        <td>{{ datum.date }}</td>
+        <td>{{ datum.listName }}</td>
+        <td>{{ datum.noOfEntities }}</td>
+        <td><button (click)="getDetails(datum)">Details</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <app-detail [detail]="detail"></app-detail>
+</div>

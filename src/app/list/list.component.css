@@ -1,0 +1,11 @@
+table {
+  width: 100%;
+  height: fit-content;
+}
+th {
+  text-align: left;
+}
+.container {
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
